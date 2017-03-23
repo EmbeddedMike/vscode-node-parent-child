@@ -1,7 +1,13 @@
 console.log("Parent running")
 const cp = require('child_process');
-process.execArgv =  ["--debug=5859"];
-const n = cp.fork(`${__dirname}/child.js`);
+// process.execArgv =  ["--debug=5859"];
+const n = cp.fork(`${__dirname}/child.js`,{
+execArgv: ["--debug=9999"]
+ ,silent: true
+//  ,stdio: 'ipc'
+}
+);
+n.stdout.on("data", (m) => console.log(m.toString()));
 
 n.on('message', (m) => {
   console.log('PARENT got message:', m);
@@ -10,7 +16,6 @@ n.on('message', (m) => {
 n.send({ hello: 'INITIALLY' });
 
 const sender = () => {
-    console.log("parent")
     n.send({ hello: 'world' });
 }
 setInterval(sender, 1000);
