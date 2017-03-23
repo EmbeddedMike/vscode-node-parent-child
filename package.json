@@ -1,0 +1,17 @@
+{
+  "name": "junk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node parent.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "child-process-debug": "0.0.7",
+    "deepcopy": "^0.6.3",
+    "sizeof": "^1.0.0"
+  }
+}

@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch via NPM",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "port": 5858
+        },
+      {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/parent.js",
+            "args": [],
+            "cwd": "${workspaceRoot}"
+            ,"port": 5858
+            ,"protocol": "auto"
+            // "stopOnEntry": true
+        },{
+        "name": "Attach",
+        "type": "node",
+        "request": "attach",
+        "port": 5858,
+        "address": "localhost",
+        "restart": false,
+        "sourceMaps": false,
+        "outFiles": [],
+        "localRoot": "${workspaceRoot}",
+        "remoteRoot": null
+    },
+    {
+        "name": "Attach child",
+        "type": "node",
+        "request": "attach",
+        "port": 5859,
+        "address": "localhost",
+        "restart": false,
+        "sourceMaps": false,
+        "outFiles": [],
+        "localRoot": "${workspaceRoot}",
+        "remoteRoot": null
+    }
+    ]
+}
