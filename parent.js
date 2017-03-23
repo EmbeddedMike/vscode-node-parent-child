@@ -2,7 +2,7 @@ console.log("Parent running")
 const cp = require('child_process');
 // process.execArgv =  ["--debug=5859"];
 const n = cp.fork(`${__dirname}/child.js`,{
-execArgv: ["--debug=9999"]
+execArgv: ["--debug=5859"]
  ,silent: true
 //  ,stdio: 'ipc'
 }

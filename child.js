@@ -6,7 +6,6 @@ process.on('message', (m) => {
 
 
 sender = () => {
-    console.log("child sends")
     process.send({ foo: 'bar' });
 }
 setInterval(
