@@ -9,16 +9,19 @@ execArgv: ["--debug=5859"]
 );
 n.stdout.on("data", (m) => console.log(m.toString()));
 
-n.on('message', (m) => {
-  console.log('PARENT got message:', m);
-});
-
-n.send({ hello: 'INITIALLY' });
-
 const sender = () => {
     n.send({ hello: 'world' });
 }
-setInterval(sender, 1000);
+
+n.on('message', (m) => {
+  console.log('PARENT got message:', m);
+  sender()
+});
+
+
+
+
+
 /*
 //const cp = require('child_process');
 console.log("Parent");
