@@ -11,7 +11,7 @@
             "program": "${workspaceRoot}/parent.js",
             "args": [],
             "cwd": "${workspaceRoot}"
-            // ,"port": 5858
+            ,"port": 5858
             ,"protocol": "auto"
             // "stopOnEntry": true
         }
@@ -48,6 +48,7 @@
         {
             "name": "Program/Child",
             "configurations": ["Program", "Child"]
+            
         }
     ]
 }

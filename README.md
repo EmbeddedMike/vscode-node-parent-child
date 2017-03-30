@@ -2,9 +2,10 @@
 
 This is a VS code project that lets you open a debugger on a parent process and a child at the same time.
 
-It shows two ways to connect: 
+It shows three ways to connect:
 1. Connecting to one process at a time
 2. Connecting to both together
+3. Disconnecting and reconnecting
 
 # Connecting to one process at a time
 
@@ -36,7 +37,7 @@ Like this one <img src="https://code.visualstudio.com/images/debugging_debug-act
 
 > Note: in this case F5 will not attach to the child, but cause the already running parent to continue and stop at the breakpoint again.
 
-5. The debug widget will now hafe a a drop-down list and let you switch betwen to  the parent (launch) process or to the child. You can also disconnect from one or the other
+5. The debug widget will now have a a drop-down list and let you switch between  the parent (launch) process or to the child. You can also disconnect from one or the other
 
 6. If you press the green arrow in the debugger widget, or F5, the program will run to the next breakpoint--which by design is in the other process, display the code and stop there. Pressing F5 again moves it back.
 
@@ -44,10 +45,13 @@ Like this one <img src="https://code.visualstudio.com/images/debugging_debug-act
 
 # Connecting to both together
 
-1. Select the Program/Child lauch configuration.
+1. Select the Program/Child launch configuration.
 
 2. Press F5 of click on the green arrow.
 
 3. The debugger will stop in parent.js and both 
 
+# Disconnecting and reconnecting
+
+1. If yu
 
