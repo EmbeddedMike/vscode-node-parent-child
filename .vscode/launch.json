@@ -7,15 +7,18 @@
       {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Program",
             "program": "${workspaceRoot}/parent.js",
             "args": [],
             "cwd": "${workspaceRoot}"
-            ,"port": 5858
+            // ,"port": 5858
             ,"protocol": "auto"
             // "stopOnEntry": true
-        },{
-        "name": "Attach",
+        }
+       
+        
+        ,{
+        "name": "Parent",
         "type": "node",
         "request": "attach",
         "port": 5858,
@@ -24,10 +27,11 @@
         "sourceMaps": false,
         "outFiles": [],
         "localRoot": "${workspaceRoot}",
-        "remoteRoot": null
+        "remoteRoot": null,
+        "protocol": "legacy"
     },
     {
-        "name": "Attach child",
+        "name": "Child",
         "type": "node",
         "request": "attach",
         "port": 5859,
@@ -37,7 +41,13 @@
         "outFiles": [],
         "localRoot": "${workspaceRoot}",
         "remoteRoot": null,
-        "protocol": "auto"
+        "protocol": "legacy"
     }
+    ],
+      "compounds": [
+        {
+            "name": "Program/Child",
+            "configurations": ["Program", "Child"]
+        }
     ]
 }

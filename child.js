@@ -6,8 +6,9 @@ sender = () => {
 }
 
 process.on('message', (m) => {
-  sender()
   console.log('CHILD got message:', m);
+  sender()
+  
 });
 sender();
 
