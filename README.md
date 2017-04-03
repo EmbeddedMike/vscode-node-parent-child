@@ -53,5 +53,5 @@ Like this one <img src="https://code.visualstudio.com/images/debugging_debug-act
 
 # Disconnecting and reconnecting
 
-1. If yu
+If you disconnect from the parent, then the child disconnects as well. But if you disconnect from the child, you can reconnect using the `child` launch configuration
 

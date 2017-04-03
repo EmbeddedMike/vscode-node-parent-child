@@ -10,5 +10,6 @@ process.on('message', (m) => {
   sender()
   
 });
+//start by sending a message
 sender();
 

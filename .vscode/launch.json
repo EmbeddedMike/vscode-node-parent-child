@@ -7,18 +7,17 @@
       {
             "type": "node",
             "request": "launch",
-            "name": "Program",
+            "name": "Parent",
             "program": "${workspaceRoot}/parent.js",
             "args": [],
             "cwd": "${workspaceRoot}"
-            ,"port": 5858
+            // ,"port": 5858
             ,"protocol": "auto"
             // "stopOnEntry": true
         }
        
-        
         ,{
-        "name": "Parent",
+        "name": "Console Parent",
         "type": "node",
         "request": "attach",
         "port": 5858,
@@ -46,8 +45,8 @@
     ],
       "compounds": [
         {
-            "name": "Program/Child",
-            "configurations": ["Program", "Child"]
+            "name": "Parent/Child",
+            "configurations": ["Parent", "Child"]
             
         }
     ]
