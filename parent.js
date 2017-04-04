@@ -1,7 +1,8 @@
 console.log("Parent running")
 const cp = require('child_process');
-// process.execArgv =  ["--debug=5859"];
+
 const child = cp.fork(`${__dirname}/child.js`,{
+
  //force the debug port to the one in the launch config
  execArgv: ["--debug=5859"]
  ,silent: true

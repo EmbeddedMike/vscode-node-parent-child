@@ -1,4 +1,4 @@
-console.log("Child started");
+console.log("Child started\nu");
 console.log(process.argv)
 
 sender = () => {
