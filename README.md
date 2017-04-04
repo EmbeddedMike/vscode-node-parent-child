@@ -2,12 +2,12 @@
 
 This is a VS code project that lets you open a debugger on a parent process and a child at the same time.
 
-It shows three ways to connect:
-1. Connecting to one process at a time
-2. Connecting to both together
-3. Disconnecting and reconnecting
+It shows several ways to connect:
+1. Connecting to one process at a time in debugger
+2. Connecting to both together in debugger
+3. Connecting to a parent started in a console
 
-# Connecting to one process at a time
+# Connecting to one process at a time in debugger
 
 1. Switch to the debug view
 
@@ -21,7 +21,7 @@ It shows three ways to connect:
 
 ```
 Debugging with inspector protocol because Node v6.10.0 was detected.
-node --inspect=5858 --debug-brk parent.js 
+node --inspect=SOME PORT --debug-brk parent.js 
 Debugger listening on port 5858.
 Warning: This is an experimental feature and could change at any time.
 Debugger attached.

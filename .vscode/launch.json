@@ -13,10 +13,9 @@
             "cwd": "${workspaceRoot}"
             // ,"port": 5858
             ,"protocol": "auto"
-            // "stopOnEntry": true
-        }
+            
        
-        ,{
+        },{
         "name": "Console Parent",
         "type": "node",
         "request": "attach",
